@@ -1,0 +1,10 @@
+.startLabel {width:100px;
+             display: inline-block}
+
+div, table {border: 1px solid;
+     border-radius: 25px;
+     width:400px;
+     padding:35px;}
+
+.date {text-align:left;}
+.result {text-align:right;}
