@@ -16,11 +16,10 @@ if(IsNullOrEmptyString($e)) {
 	$end   = date("y.m.d", strtotime($e));
 }
 
-//Needs to be filled in with SQL database values
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+$servername = "localhost";
+$username   = "864421";
+$password   = "waswas12";
+$dbname     = "864421";
     
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -55,7 +54,10 @@ if (IsNullOrEmptyString($app)) {
     
     echo "</select>
         <br>
-		<br>
+	<br>
+
+        <label>Date Range (Optional):</label>
+        <br>
         
         <label class='startLabel'>Start Date: </Label>
         <input type='text' name='start' id='start'>
@@ -116,4 +118,4 @@ if (IsNullOrEmptyString($app)) {
        function IsNullOrEmptyString($question){
           return (!isset($question) || trim($question)==='');
        }
-?>
+?>		
