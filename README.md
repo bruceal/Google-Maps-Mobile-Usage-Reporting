@@ -6,6 +6,8 @@ In order for this code to work there are two requirements:
 
 2)The database needs to have a table called Applications with at least a column called App.  From there it will create its own tables as nessecary.
 
+In addition you will need to update the Path variable in script.js to point to the address of get_usage.php
+
 
 To Record maps usage you need to have your mobile application request the add_data.php file over the internet with the parameter app=YourAppName/Channel
 
