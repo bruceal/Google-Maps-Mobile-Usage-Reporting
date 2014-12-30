@@ -40,7 +40,7 @@ if (IsNullOrEmptyString($app)) {
   <body>
 	  <h2>Mobile Usage Checker</h2>
       <div>
-        <label>App: </label>
+        <label>App/Channel: </label>
         <select id='app'>";
     //create options
     $sql    = "SELECT App FROM Applications";
