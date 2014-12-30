@@ -1,3 +1,5 @@
+This is the PHP code you should hoist on your server/domain in order to record your page views and map loads and/or Page Views for use with the Google Maps Mobile SDKs.
+
 In order for this code to work there are two requirements:
 
 1) An sql server active on the domain. This will need to have an active database which can be authenticated to.  Inside each php file is a section where the credentials of the database need to be added.
