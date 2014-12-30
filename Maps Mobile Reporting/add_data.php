@@ -24,14 +24,14 @@
 			$result = $conn->query($sql);
 			if($result->num_rows > 0){
 				//update existing table
-				$sql = "SELECT page_views FROM ".$app." WHERE day='".date("y.m.d") . "'";
+				$sql = "SELECT map_loads FROM ".$app." WHERE day='".date("y.m.d") . "'";
 				$result = $conn->query($sql);
 				if($result->num_rows > 0){
 					$row = $result->fetch_assoc();
-					$count = intval($row["page_views"]) + 1;
+					$count = intval($row["map_loads"]) + 1;
 
 					//Do the actual update
-					$sql = "UPDATE ".$app." SET page_views =" . $count . " WHERE day='".date("y.m.d") . "'";
+					$sql = "UPDATE ".$app." SET map_loads =" . $count . " WHERE day='".date("y.m.d") . "'";
 					if ($conn->query($sql) === TRUE) {
     					echo "Record updated successfully";
 					} else {
@@ -39,7 +39,7 @@
 					}
 				} else {
 					//Add Usage
-					$sql = "INSERT INTO ".$app." (day, page_views) VALUES ('".date("y.m.d") . "',1)";
+					$sql = "INSERT INTO ".$app." (day, map_loads) VALUES ('".date("y.m.d") . "',1)";
         			if($conn->query($sql)===TRUE){
 						echo "Record updated successfully";
 					} else {
@@ -48,7 +48,7 @@
 				}
 			} else {
 				//create table
-				$sql="CREATE TABLE ".$app." (day DATE, page_views int(11))";
+				$sql="CREATE TABLE ".$app." (day DATE, map_loads int(11))";
 				if ($conn->query($sql) === TRUE) {
            			$sql = "INSERT INTO Applications (App) VALUES ('".$app."')";
 					if($conn->query($sql)===TRUE){
@@ -61,7 +61,7 @@
         		}
 				
 				//Add Usage
-				$sql = "INSERT INTO ".$app." (day, page_views) VALUES ('".date("y.m.d") . "',1)";
+				$sql = "INSERT INTO ".$app." (day, map_loads) VALUES ('".date("y.m.d") . "',1)";
 
         		if ($conn->query($sql) === TRUE) {
            			echo "New record created successfully ";

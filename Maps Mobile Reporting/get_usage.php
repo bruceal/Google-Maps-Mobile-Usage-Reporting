@@ -91,16 +91,16 @@ if (IsNullOrEmptyString($app)) {
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
-		echo "<tr><td>Date</td><td class='result'>Page Views</td></tr>";
+		echo "<tr><td>Date</td><td class='result'>Map Loads</td></tr>";
 		while ($row = $result->fetch_assoc()) {
 			$date = date("y.m.d", strtotime($row["day"]));
 			if($flag){
 				if($date < $end && $date > $start){
-					echo "<tr><td class='date'>".$row["day"]."</td><td class='result'>".$row["page_views"]."</td></tr>";
+					echo "<tr><td class='date'>".$row["day"]."</td><td class='result'>".$row["map_loads"]."</td></tr>";
 				}
 			} else {
 				if($date < $end){
-					echo "<tr><td class='date'>".$row["day"]."</td><td class='result'>".$row["page_views"]."</td></tr>";
+					echo "<tr><td class='date'>".$row["day"]."</td><td class='result'>".$row["map_loads"]."</td></tr>";
 				}
 			}
 		}

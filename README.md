@@ -1,4 +1,4 @@
-This is the PHP code you should hoist on your server/domain in order to record your page views and map loads and/or Page Views for use with the Google Maps Mobile SDKs.
+This is the PHP code you should hoist on your server/domain in order to record your map loads for use with the Google Maps Mobile SDKs.
 
 In order for this code to work there are two requirements:
 
