@@ -16,10 +16,10 @@ if(IsNullOrEmptyString($e)) {
 	$end   = date("y.m.d", strtotime($e));
 }
 
-$servername = "localhost";
-$username   = "864421";
-$password   = "waswas12";
-$dbname     = "864421";
+$servername = "";
+$username   = "";
+$password   = "";
+$dbname     = "";
     
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
